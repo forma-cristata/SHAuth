@@ -1,0 +1,112 @@
+* {
+  --button-normally: var(--dark-middle-green);
+  --button-hover: var(--dark-middle-green2);
+  --button-active: var(--dark-middle-green3);
+  --button-active-border: var(--dark-middle-green4);
+}
+
+/*HEADER*/
+#info-button-sha {
+  position: absolute;
+  top: 20px;
+  left: calc(50vw - 25px);
+  z-index: 5;
+}
+
+#back-button-sha {
+  position: absolute;
+  top: 20px;
+  right: calc(50vw + 65px);
+  z-index: 5;
+}
+
+/*BODY*/
+.btn-primary {
+  height: calc(3.5rem + calc(var(--bs-border-width) * 2)) !important;
+  margin-left: 20px;
+  padding: 1rem 0.75rem !important;
+  vertical-align: top !important;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--button-normally) !important;
+  --bs-btn-border-color: var(--button-normally) !important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--button-hover) !important;
+  --bs-btn-hover-border-color: var(--button-active) !important;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--button-active) !important;
+  --bs-btn-active-border-color: var(--button-active-border) !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--button-normally) !important;
+  --bs-btn-disabled-border-color: var(--button-normally) !important;
+}
+
+.class-blocker {
+  width: min(calc((100vw - 120px) / 2), calc((100vh - 320px - 40px)));
+  height: 280px;
+  border: 5px solid var(--indigogo);
+  border-radius: 20px !important;
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 94px - 140px);
+  transform: translate(-50%, 0);
+  padding: 30px 20px;
+}
+
+#classes-table {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 7;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 360px);
+  padding: 0 0;
+}
+
+#class-table {
+  margin: auto auto;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 360px);
+}
+
+#c1 {
+  border: 10px double var(--custom-teal);
+  box-shadow: 0 0 2rem var(--muted-green);
+  position: relative;
+}
+
+.form-floating {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h3, #feedback-header {
+  font-size: min(2rem, 2vw);
+  font-variant: small-caps;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+#loading-boxer {
+  scale: 0.5;
+  position: absolute;
+  left: 75%;
+  top: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.silence {
+  height: calc(3.5rem + calc(var(--bs-border-width) * 2)) !important;
+  margin-left: 20px;
+  padding: 1rem 0.75rem !important;
+  vertical-align: top !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+td {
+  text-align: center;
+}

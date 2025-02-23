@@ -1,0 +1,65 @@
+button {
+  margin-left: 2%;
+  margin-bottom: 1%;
+  width: 56px;
+  height: 56px;
+}
+
+.btn-primary {
+  height: calc(3.5rem + calc(var(--bs-border-width) * 2)) !important;
+  margin-left: 20px;
+  padding: 1rem 0.75rem !important;
+  vertical-align: top !important;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--gh-green);
+  --bs-btn-border-color: var(--gh-green);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--light-green);
+  --bs-btn-hover-border-color: var(--light-green);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--dark-magenta);
+  --bs-btn-active-border-color: var(--dark-magenta);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--gh-green);
+  --bs-btn-disabled-border-color: var(--gh-green);
+}
+
+#chev-3 {
+  animation: colors 1000ms linear infinite;
+  animation-delay: 500ms;
+}
+
+#chev-2 {
+  animation: colors 1000ms linear infinite;
+  animation-delay: 250ms;
+}
+
+#chev-1 {
+  animation: colors 1000ms linear infinite;
+}
+
+#fit-betas {
+  min-width: 325px;
+  width: 100%;
+  height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+}
+
+h4 {
+  width: 333px;
+  font-variant: all-small-caps;
+}
+
+@keyframes colors {
+  0% {
+    color: var(--periwinkle);
+  }
+
+  75% {
+    color: var(--light-green)
+  }
+  100% {
+    color: var(--light-green)
+  }
+}

@@ -1,0 +1,78 @@
+/*HEADER*/
+#profile-button-prof {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  transform-origin: top left;
+  transform: scale(200%);
+  filter: drop-shadow(0 0 0.75rem var(--gh-green));
+}
+
+#back-button-prof {
+  position: absolute;
+  top: 20px;
+  right: calc(50vw + 10px);
+  z-index: 5;
+}
+
+#profile-info-div {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  height: calc(100vh - 280px);
+  padding: 0 0 0 0;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  margin-top: 150px;
+
+}
+
+#circuit-animation-div-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: scale(25%);
+  border: 6px solid var(--gh-green);
+  filter: drop-shadow(0 0 0.5rem var(--custom-teal)) saturate(150%) blur(100%);
+}
+
+.flex-attempt {
+  height: 200px;
+  flex-wrap: wrap;
+}
+
+.flex-attempt2 {
+  flex-wrap: wrap;
+}
+
+#how-to-div {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  height: calc(100vw - 580px);
+}
+
+#how-body{
+  height: calc(100vw - 660px);
+  margin-left: 50px;
+  overflow-y: scroll;
+  scrollbar-base-color: var(--gh-green);
+  border-right: 2px solid var(--productive-purple);
+  background-color: var(--midnight);
+  border-radius: 20px 5px 5px 20px;
+  padding: 20px;
+  mask-image: linear-gradient(to bottom, black calc(100% - 48px), transparent 100%);
+  font-family: monospace;
+}
+
+#how-title {
+  color: var(--productive-purple);
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 0 0 0 0;
+  font-variant: small-caps;
+  font-family: vonique, monospace;
+}

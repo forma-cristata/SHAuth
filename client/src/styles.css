@@ -1,0 +1,205 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+  font-family: "vonique";
+  src: url('assets/Vonique 64.ttf') format('truetype');
+}
+
+body {
+  background-color: var(--background);
+}
+
+:root {
+  --background: #2b3137;
+  --midnight: #24292e;
+  --indigogo: #6F779D;
+  --greyrocking: #acbad5;
+  --periwinkle: #ffffff;
+  --dark-magenta: #a30052;
+  --dark-dots: #FF507A;
+  --flamingo-dark: #ff507a;
+  --contrast-a1: #fc9a8f;
+  --contrast-a2: #ff6a37;
+  --contrast-a3: #f47d00;
+  --contrast-a4: #ff6846;
+  --contrast-a5: #ff6f1f;
+  --contrast-a6: #858f00;
+  --contrast-a7: #6d9700;
+  --light-green: #00ff46;
+  --muted-green: #2da44f;
+  --gh-green: #2da44e;
+  --dark-middle-green: #2da44f;
+  --dark-middle-green2: #268c3a;
+  --dark-middle-green3: #227a33;
+  --dark-middle-green4: #1f6b2d;
+  --another-mid-green: #00A56A;
+  --see-foam-eat-foam: #00a086;
+  --another-damn-teal: #009c9b;
+  --another-teal: #0099ab;
+  --custom-teal: #0099ab;
+  --custom-teal-2: #0097b9;
+  --skai-bloo: #0097b9;
+  --custom-darker-teal: #0095c8;
+  --custom-blue-2: #0090e0;
+  --custom-blue: #0b82ff;
+  --uv-blue: #000aff;
+  --violet: #c258ff;
+  --barney: #aa60ff;
+  --dark-peri: #9268ff;
+  --aptly-named-periwinkle: #7a70ff;
+  --productive-purple: #7c72ff;
+  --indigo-wave: rgb(75, 88, 255);
+  --icon-purple: rgb(131, 61, 255);
+  --darkest-teal: #005e73;
+  --darkest-teal-2: #004a5b;
+  --ultraviolet-glow: #978def;
+  --duration: 1s;
+
+  /*-------------------RGB IDK if necessary------------------------*/
+  --periwinkle-rgb: 172, 186, 213;
+  --ultraviolet-glow-rgb: 25, 0, 248;
+  --dark-magenta-rgb: 163, 0, 82;
+  --dark-teal-rgb: 81, 157, 168;
+  --indigogo-rgb: 111, 119, 157;
+  --midnight-rgb: 52, 45, 71;
+  --greyrocking-rgb: 184, 185, 187;
+  --light-magenta-rgb: 253, 141, 198;
+  --bs-border-color-translucent: var(--productive-purple);
+}
+
+.btn-secondary {
+  --bs-btn-bg: var(--darkest-teal-2) !important;
+  --bs-btn-hover-bg: var(--darkest-teal) !important;
+  --bs-btn-active-bg: var(--custom-teal-2);
+}
+
+.hoverers:hover {
+  filter: drop-shadow(0 0 0.75rem var(--light-green));
+  transform-origin: center;
+  transform: scale(108%);
+}
+
+input {
+  font-family: monospace;
+}
+
+label {
+  font-family: monospace;
+}
+
+.form-control:focus {
+  border-color: var(--gh-green);
+  box-shadow: 0 0 0 .25rem rgba(45, 164, 78, 0.25);
+}
+
+.toast {
+  --bs-toast-zindex: 1090;
+  --bs-toast-padding-x: 0.75rem;
+  --bs-toast-padding-y: 0.5rem;
+  --bs-toast-spacing: 1.5rem;
+  --bs-toast-color: var(--midnight);
+  --bs-toast-max-width: 350px;
+  --bs-toast-font-size: 0.8rem !important;
+  --bs-toast-bg: rgba(255, 255, 255, 0.5);
+  --bs-toast-border-width: var(--bs-border-width);
+  --bs-toast-border-color: var(--custom-teal) !important;
+  --bs-toast-border-radius: var(--bs-border-radius);
+  --bs-toast-box-shadow: var(--bs-box-shadow);
+  --bs-toast-header-color: var(--bs-secondary-color);
+  --bs-toast-header-bg: rgba(var(--bs-body-bg-rgb), .5);
+  --bs-toast-header-border-color: var(--custom-teal) !important;
+  width: var(--bs-toast-max-width);
+  max-width: 100%;
+  font-size: var(--bs-toast-font-size);
+  color: var(--bs-toast-color);
+  pointer-events: auto;
+  background-color: var(--bs-toast-bg);
+  background-clip: padding-box;
+  border: var(--bs-toast-border-width) solid var(--bs-toast-border-color);
+  box-shadow: var(--bs-toast-box-shadow);
+  margin-bottom: 40px;
+}
+
+a:link, a:visited {
+  color: var(--darkest-teal) !important;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:link:active, a:visited:active {
+  color: var(--darkest-teal-2);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#changing-profile-button {
+  animation: biggerProfile 500ms ease-in-out;
+}
+
+#home-button, #home-button-changing {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+}
+
+#home-button-changing {
+  animation: biggerHome 500ms ease-in-out;
+}
+
+@keyframes biggerProfile {
+  0% {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+  }
+  100% {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    transform-origin: top left;
+    transform: scale(200%);
+    filter: drop-shadow(0 0 0.75rem var(--gh-green));
+  }
+}
+
+@keyframes biggerHome {
+  0% {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+  }
+  100% {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    transform-origin: top right;
+    transform: scale(200%);
+    filter: drop-shadow(0 0 0.75rem var(--gh-green));
+  }
+}
+
+.no-vis-col {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+}
+
+#profile-button, #changing-profile-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+}
+
+#refresh-data-button {
+  position: absolute;
+  top: 20px;
+  left: calc(50vw + 65px);
+}

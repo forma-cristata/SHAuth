@@ -1,0 +1,29 @@
+#all-officials {
+  margin-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+/*  border-bottom: 6px solid var(--gh-green);
+  filter: drop-shadow(0 0 0.5rem var(--custom-teal));*/
+}
+
+#class-title, #assignment-title {
+  color: var(--productive-purple);
+}
+
+.officials {
+  text-align: center;
+  width: 33vw;
+  font-variant: all-small-caps;
+  font-size: min(4vw, 4rem);
+  overflow-y: hidden;
+  text-wrap: nowrap;
+  overflow-x: scroll;
+  font-family: monospace;
+  color: var(--gh-green);
+}
+
+#username-title{
+  color: var(--productive-purple);
+}

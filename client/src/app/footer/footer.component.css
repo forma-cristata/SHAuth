@@ -1,0 +1,62 @@
+#app-name {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  z-index: 100;
+  font-size: 1.5rem;
+  color: var(--violet);
+  font-family: monospace;
+}
+
+#copywrite {
+  font-size: min(1rem, 1vw);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+}
+
+#footer-border {
+  opacity: 50%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-width: 912px;
+}
+
+#footer-content {
+  opacity: 1;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 6px solid var(--gh-green);
+  filter: drop-shadow(0 0 0.5rem var(--custom-teal));
+  font-family: monospace;
+}
+
+#hide-border-footer{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background);
+  z-index: 4;
+}
+
+img{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+#strong-boi{
+  color: var(--productive-purple);
+  scale: 1.1;
+  font-family: vonique, monospace;
+}
