@@ -1,4 +1,6 @@
-# Project Name
+# SHAuth
+
+https://github.com/user-attachments/assets/4324d6b1-b844-4e94-8ad1-895c70a9487c
 
 ## Description
 This project is a web application built with Angular for the client-side and Node.js for the server-side. It includes features for managing assignments and classes, with data fetched from GitHub and cached locally.
@@ -88,7 +90,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Contact
-For any inquiries, please contact [your-email@example.com].
+For any inquiries, please contact kaci.a.craycraft@gmail.com
 
 
 
