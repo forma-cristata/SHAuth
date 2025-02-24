@@ -1,5 +1,5 @@
 {
-  "gitHubAccessToken" : "INSERT ORG TOKEN HERE",
+  "gitHubAccessToken" : "YOUR TOKEN HERE",
   "pollTime" : "00:01",
-  "organization": "SouthHills"
+  "organization": "YOUR ORG HERE"
 }

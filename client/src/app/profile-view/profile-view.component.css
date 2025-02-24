@@ -52,11 +52,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
-  height: calc(100vw - 580px);
+  height: calc(100vh - 580px);
+
 }
 
 #how-body{
-  height: calc(100vw - 660px);
+  height: calc(100vh - 660px);
   margin-left: 50px;
   overflow-y: scroll;
   scrollbar-base-color: var(--gh-green);
