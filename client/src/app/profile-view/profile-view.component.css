@@ -22,7 +22,7 @@
   display: flex;
   height: calc(100vh - 280px);
   padding: 0 0 0 0;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   overflow-y: scroll;
   margin-top: 150px;
@@ -40,23 +40,29 @@
 }
 
 .flex-attempt {
-  height: 200px;
   flex-wrap: wrap;
+  height: calc((100vh - 280px)/4);
+
 }
 
 .flex-attempt2 {
   flex-wrap: wrap;
+  height: calc((100vh - 280px)/2);
+}
+
+.flex-attempt3{
+  height: calc((100vh - 280px)/4);
+  padding-left: 50px;
 }
 
 #how-to-div {
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
-  height: calc(100vh - 580px);
 }
 
-#how-body{
-  height: calc(100vh - 660px);
+#how-body {
+  height: calc((100vh - 280px)/2 - 110px);
   margin-left: 50px;
   overflow-y: scroll;
   scrollbar-base-color: var(--gh-green);
@@ -68,11 +74,26 @@
   font-family: monospace;
 }
 
-#how-title {
+#how-title, #credits-title {
   color: var(--productive-purple);
   margin-left: 20px;
   margin-bottom: 0;
   padding: 0 0 0 0;
   font-variant: small-caps;
   font-family: vonique, monospace;
+}
+#credits-body{
+  margin-left: 0;
+  mask-image: none;
+  height: calc((100vh - 280px)/4 - 110px);
+  scrollbar-base-color: var(--gh-green);
+  border-right: 2px solid var(--productive-purple);
+  background-color: var(--midnight);
+  border-radius: 20px 5px 5px 20px;
+  padding: 20px;
+  font-family: monospace;
+  justify-content: center;
+  align-content: space-evenly;
+  font-variant: all-petite-caps;
+  overflow-y: scroll;
 }

@@ -1,15 +1,13 @@
 .change-user{
-  height: 160px;
   margin-top: 20px;
   font-variant: small-caps;
   padding-left: 70px;
 }
 
-#change-title{
+#change-title {
   color: var(--productive-purple);
   font-family: vonique, monospace;
-  margin-bottom: 33px;}
-
+}
 #contain{
   flex-direction: row;
   flex-wrap: wrap;
