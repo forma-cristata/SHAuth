@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {Router} from '@angular/router';
-import {getCookie} from '../get-cookie';
+import {getCookie} from '../get-cookie.component';
 
 @Component({
   selector: 'app-registration-form',

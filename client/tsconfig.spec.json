@@ -10,6 +10,7 @@
   },
   "include": [
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/app/get-cookie.component.spec.ts"
   ]
 }

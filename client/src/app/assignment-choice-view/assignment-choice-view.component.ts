@@ -4,7 +4,7 @@ import {ProfileButtonComponent} from '../profile-button/profile-button.component
 import {HomeButtonComponent} from '../home-button/home-button.component';
 import {BackButtonComponent} from '../back-button/back-button.component';
 import {Router, RouterLink} from '@angular/router';
-import {getCookie, setCookie} from '../get-cookie';
+import {getCookie, setCookie} from '../get-cookie.component';
 import {Octokit} from 'octokit';
 import {LoadingIconComponent} from '../loading-icon/loading-icon.component';
 import {of} from 'rxjs';

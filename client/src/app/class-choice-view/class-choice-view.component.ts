@@ -3,7 +3,7 @@ import {InfoButtonComponent} from '../info-button/info-button.component';
 import {ProfileButtonComponent} from '../profile-button/profile-button.component';
 import {HomeButtonComponent} from '../home-button/home-button.component';
 import {CircuitAnimationComponent} from '../circuit-animation/circuit-animation.component';
-import {getCookie, setCookie} from '../get-cookie';
+import {getCookie, setCookie} from '../get-cookie.component';
 import {Router, RouterLink} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {Octokit} from 'octokit';

@@ -3,7 +3,7 @@ import {ProfileButtonComponent} from '../profile-button/profile-button.component
 import {HomeButtonComponent} from '../home-button/home-button.component';
 import {CircuitAnimationComponent} from '../circuit-animation/circuit-animation.component';
 import {Router} from '@angular/router';
-import {getCookie} from '../get-cookie';
+import {getCookie} from '../get-cookie.component';
 import {ChangeUsernameComponent} from '../change-username/change-username.component';
 import {InfoButtonComponent} from '../info-button/info-button.component';
 

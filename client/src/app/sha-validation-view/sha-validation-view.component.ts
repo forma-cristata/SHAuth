@@ -4,8 +4,8 @@ import {ProfileButtonComponent} from '../profile-button/profile-button.component
 import {HomeButtonComponent} from '../home-button/home-button.component';
 import {BackButtonComponent} from '../back-button/back-button.component';
 import {Router, RouterLink} from '@angular/router';
-import '../get-cookie';
-import {getCookie} from '../get-cookie';
+import '../get-cookie.component';
+import {getCookie} from '../get-cookie.component';
 import {Octokit} from 'octokit';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LoadingIconComponent} from '../loading-icon/loading-icon.component';

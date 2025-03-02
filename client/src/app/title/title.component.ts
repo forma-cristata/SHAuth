@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {getCookie} from '../get-cookie';
+import {getCookie} from '../get-cookie.component';
 
 @Component({
   selector: 'app-title',
