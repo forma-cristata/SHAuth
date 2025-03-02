@@ -2,6 +2,10 @@ import {assert} from "chai";
 import { WriteAssignmentsToFile} from "../modules/assignments.mjs";
 import fs from "fs";
 
+/**
+ * Tests that assignments are written to the correct file path.
+ * Useful for running the application in a CI/CD pipeline.
+ */
 describe('server', function() {
     describe('modules', function() {
         describe('assignments', function() {
