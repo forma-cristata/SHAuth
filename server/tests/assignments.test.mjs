@@ -12,4 +12,7 @@ describe('server', function() {
                 assert.equal(path , `../database/assignments${classId}.json`);
                 fs.unlinkSync(path);
             });
-})})});
+
+        })
+    })
+});
