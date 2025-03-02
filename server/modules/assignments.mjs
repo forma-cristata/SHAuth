@@ -86,6 +86,7 @@ function WriteAssignmentsToFile(assignments, cId) {
     try {
         fs.writeFileSync(path, JSON.stringify(assignments));
         process.stdout.write(`\\\x1b[32m \rFile at ${path} written successfully.\n`);
+        return path;
     } catch (e) {
         process.stdout.write(`\\\x1b[31m \rAn error occurred while writing to the file at ${path}. Error occurs at assignments.mjs line 16.\n`);
     }
