@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToastNotificationComponent } from './toast-notification.component';
+import {provideRouter} from '@angular/router';
 
 describe('ToastNotificationComponent', () => {
   let component: ToastNotificationComponent;
@@ -8,7 +9,8 @@ describe('ToastNotificationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToastNotificationComponent]
+      imports: [ToastNotificationComponent],
+      providers: [provideRouter([])],
     })
     .compileComponents();
 

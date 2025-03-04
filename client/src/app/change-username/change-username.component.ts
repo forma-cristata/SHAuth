@@ -29,10 +29,11 @@ export class ChangeUsernameComponent implements OnInit {
    * Creates a cookie with the username and navigates to the classes page.
    * This allows user to remain "logged in"
    */
-  createUsernameCookie() {
-    let username = this.username;
+  createUsernameCookie(user: string = "") {
+    let username = user? user : this.username;
     document.cookie = `username=${username}; expires=${(this.termLengthInSeconds)}`;
     this.username = '';
-    this.router.navigate(['/classes']);
+    this.router.navigate(['/classes']).then(() => {
+      console.log('Navigated to classes page')});
   }
 }

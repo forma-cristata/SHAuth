@@ -97,7 +97,7 @@ export class AssignmentChoiceViewComponent implements OnInit {
     ((await this.octokit.request(`GET http://localhost:3009/refresh`, {})));
     document.querySelector('#loading-boxer')!.classList.add('d-none');
     document.querySelector('#assignments-table')!.classList.remove('d-none');
-    this.router.navigate(['/']);
+    await this.router.navigate(['/']);
   }
 
   /**
@@ -116,7 +116,7 @@ export class AssignmentChoiceViewComponent implements OnInit {
       }, 100 * i);
     }
     setTimeout(() => {
-      this.router.navigate(['/sha-validation'])
+      this.router.navigate(['/sha-validation']).then(() => {})
     }, 100 * (assBlockers.length + 1) + 500);
   }
 
@@ -133,7 +133,7 @@ export class AssignmentChoiceViewComponent implements OnInit {
     document.querySelector('#changing-profile-button')!.classList.remove('d-none');
     document.querySelector('#profile-button')!.classList.add('d-none');
     setTimeout(() => {
-      this.router.navigate(['/profile'])
+      this.router.navigate(['/profile']).then(() => {})
     }, 450);
   }
 
@@ -144,7 +144,7 @@ export class AssignmentChoiceViewComponent implements OnInit {
     document.querySelector('#home-button-changing')!.classList.remove('d-none');
     document.querySelector('#home-button')!.classList.add('d-none');
     setTimeout(() => {
-      this.router.navigate(['/classes'])
+      this.router.navigate(['/classes']).then(() => {})
     }, 450);
   }
 

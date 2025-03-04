@@ -64,13 +64,13 @@ export class ShaValidationViewComponent implements OnInit {
     this.className = getCookie('class');
 
     if (!this.username) {
-      this.router.navigate(['/']);
+      await this.router.navigate(['/']);
     }
     if (!this.className) {
-      this.router.navigate(['/classes']);
+      await this.router.navigate(['/classes']);
     }
     if (!this.assignmentName) {
-      this.router.navigate(['/assignments']);
+      await this.router.navigate(['/assignments']);
     }
   }
 

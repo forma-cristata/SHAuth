@@ -7,9 +7,9 @@ import {ProfileViewComponent} from './profile-view/profile-view.component';
 import {LoadingIconComponent} from './loading-icon/loading-icon.component';
 
 export const routes: Routes = [
-  {path: '', component: RegistrationViewComponent},
-  {path: 'classes', component: ClassChoiceViewComponent},
-  {path: 'assignments', component: AssignmentChoiceViewComponent},
-  {path: 'sha-validation', component: ShaValidationViewComponent},
-  {path: 'profile', component: ProfileViewComponent},
+  {path: '', component: RegistrationViewComponent, title: "Register"},
+  {path: 'classes', component: ClassChoiceViewComponent, title: "Home"},
+  {path: 'assignments', component: AssignmentChoiceViewComponent, title: "Assignments"},
+  {path: 'sha-validation', component: ShaValidationViewComponent, title: "SHA Validation"},
+  {path: 'profile', component: ProfileViewComponent, title: "Profile & Info"},
 ];

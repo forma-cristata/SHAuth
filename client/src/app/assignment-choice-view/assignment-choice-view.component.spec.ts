@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router';
 import { AssignmentChoiceViewComponent } from './assignment-choice-view.component';
 
 describe('AssignmentChoiceViewComponent', () => {
@@ -8,7 +8,8 @@ describe('AssignmentChoiceViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AssignmentChoiceViewComponent]
+      imports: [AssignmentChoiceViewComponent],
+      providers: [provideRouter([])],
     })
     .compileComponents();
 
