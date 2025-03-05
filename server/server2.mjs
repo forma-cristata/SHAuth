@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // pollTime: string, hour: string, minute: string
-const pollTime = JSON.parse(fs.readFileSync('../app.config.json', 'utf8')).pollTime;
+const pollTime = JSON.parse(fs.readFileSync('./database/app.config.json', 'utf8')).pollTime;
 const hour = pollTime.split(":")[0];
 const minute = pollTime.split(":")[1];
 

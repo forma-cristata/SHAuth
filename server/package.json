@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server1": "nodemon --ignore '*.json' server.mjs",
-    "server2": "nodemon --ignore '*.json' server2.mjs",
+    "server1": "node server.mjs",
+    "server2": "node server2.mjs",
     "start": "concurrently \"npm run server1\" \"npm run server2\"",
     "test": "mocha"
   },
@@ -24,7 +24,6 @@
   "devDependencies": {
     "chai": "^5.2.0",
     "mocha": "^11.1.0",
-    "nodemon": "^3.1.9",
     "parcel": "^2.13.3"
   }
 }
