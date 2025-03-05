@@ -3,7 +3,7 @@ name: Deploy Servers
 on:
   push:
     branches:
-      - deployment
+      - servers-deployment
 
 jobs:
   build-and-deploy:
