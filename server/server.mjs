@@ -6,21 +6,6 @@ import {ClassesCacheRequest} from "./modules/classes.mjs";
 import {shaGHRequest, generateFeedback} from "./modules/shas.mjs";
 import compression from 'compression';
 
-
-/**
- ********* DEPLOYMENT INSTRUCTIONS ***********
- * cd ./server
- * docker build -t server-app .
- * docker build -t server2-app -f Dockerfile2 .
- * cd ..
- * cd ./client
- * docker build -t client-app .
- * cd ..
- * docker-compose up
- */
-
-
-
 const app = express();
 const PORT = 3012;
 
