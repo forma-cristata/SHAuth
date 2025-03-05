@@ -4,12 +4,14 @@ import cors from 'cors';
 import {AssignmentsCacheRequest} from "./modules/assignments.mjs";
 import {ClassesCacheRequest} from "./modules/classes.mjs";
 import {shaGHRequest, generateFeedback} from "./modules/shas.mjs";
+import compression from 'compression';
 
 const app = express();
 const PORT = 3012;
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(compression());
 
 /**
  * Starts the server and listens on the specified port.

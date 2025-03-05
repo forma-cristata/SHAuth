@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "4912:4912"
+    depends_on:
+      - server
+      - server2
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "3012:3012"
+
+  server2:
+    build:
+      context: ./server
+      dockerfile: Dockerfile2
+    ports:
+      - "3009:3009"

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ShaValidationViewComponent } from './sha-validation-view.component';
+import {provideRouter} from '@angular/router';
 
 describe('ShaValidationViewComponent', () => {
   let component: ShaValidationViewComponent;
@@ -8,7 +8,8 @@ describe('ShaValidationViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ShaValidationViewComponent]
+      imports: [ShaValidationViewComponent],
+      providers: [provideRouter([])],
     })
     .compileComponents();
 

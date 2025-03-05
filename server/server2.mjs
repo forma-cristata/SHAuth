@@ -5,15 +5,17 @@ import { octokit, WriteClassesToFile} from "./modules/classes.mjs";
 import { ParseAssignmentNames, WriteAssignmentsToFile} from "./modules/assignments.mjs";
 import fs from "fs";
 import cron from 'node-cron';
+import compression from 'compression';
 
 const app = express();
 const PORT = 3009;
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(compression());
 
 // pollTime: string, hour: string, minute: string
-const pollTime = JSON.parse(fs.readFileSync('../app.config.json', 'utf8')).pollTime;
+const pollTime = JSON.parse(fs.readFileSync('./database/app.config.json', 'utf8')).pollTime;
 const hour = pollTime.split(":")[0];
 const minute = pollTime.split(":")[1];
 

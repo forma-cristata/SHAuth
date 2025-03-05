@@ -3,7 +3,7 @@ import {InfoButtonComponent} from '../info-button/info-button.component';
 import {ProfileButtonComponent} from '../profile-button/profile-button.component';
 import {HomeButtonComponent} from '../home-button/home-button.component';
 import {CircuitAnimationComponent} from '../circuit-animation/circuit-animation.component';
-import {getCookie, setCookie} from '../get-cookie';
+import {getCookie, setCookie} from '../get-cookie.component';
 import {Router, RouterLink} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {Octokit} from 'octokit';
@@ -12,7 +12,6 @@ import {ManualPollButtonComponent} from '../manual-poll-button/manual-poll-butto
 import {ToastNotificationComponent} from '../toast-notification/toast-notification.component';
 import {Toast} from '../toast';
 import {TitleComponent} from '../title/title.component';
-
 @Component({
   selector: 'app-class-choice-view',
   imports: [
@@ -58,7 +57,7 @@ export class ClassChoiceViewComponent implements OnInit {
    */
   async ngOnInit() {
     if (!getCookie('username')) {
-      this.router.navigate(['/']);
+      await this.router.navigate(['/']);
     }
     setCookie('class', '');
     setCookie('assignment', '');
@@ -98,7 +97,7 @@ export class ClassChoiceViewComponent implements OnInit {
     }
 
     setTimeout(() => {
-      this.router.navigate(['/assignments'])
+      this.router.navigate(['/assignments']).then(() => {})
     }, 100 * classBlockers.length + 500);
   }
 
@@ -113,7 +112,7 @@ export class ClassChoiceViewComponent implements OnInit {
     ((await this.octokit.request(`GET http://localhost:3009/refresh`, {}))).data;
     document.querySelector('#loading-boxer')!.classList.add('d-none');
     document.querySelector('#classes-table')!.classList.remove('d-none');
-    this.router.navigate(['/']);
+    await this.router.navigate(['/']);
   }
 
   showToast() {
@@ -129,7 +128,7 @@ export class ClassChoiceViewComponent implements OnInit {
     document.querySelector('#changing-profile-button')!.classList.remove('d-none');
     document.querySelector('#profile-button')!.classList.add('d-none');
     setTimeout(() => {
-      this.router.navigate(['/profile'])
+      this.router.navigate(['/profile']).then(() => {})
     }, 450);
   }
 }

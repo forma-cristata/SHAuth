@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server1": "nodemon --ignore '*.json' server.mjs",
-    "server2": "nodemon --ignore '*.json' server2.mjs",
-    "start": "concurrently \"npm run server1\" \"npm run server2\""
+    "server1": "node server.mjs",
+    "server2": "node server2.mjs",
+    "start": "concurrently \"npm run server1\" \"npm run server2\"",
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "compression": "^1.8.0",
+    "compression-webpack-plugin": "^11.1.0",
     "concurrently": "^9.1.2",
     "cors": "^2.8.5",
     "express": "^4.21.2",
@@ -21,7 +24,8 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9",
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0",
     "parcel": "^2.13.3"
   }
 }

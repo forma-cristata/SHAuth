@@ -3,7 +3,7 @@ import {octokit} from "./classes.mjs";
 export {WriteAssignmentsToFile, ParseAssignmentNames, AssignmentsGHRequest, AssignmentsCacheRequest, organization};
 
 // organization: string
-const organization = JSON.parse(fs.readFileSync('../app.config.json', 'utf8')).organization;
+const organization = JSON.parse(fs.readFileSync('./database/app.config.json', 'utf8')).organization;
 
 
 /**
@@ -15,7 +15,7 @@ const organization = JSON.parse(fs.readFileSync('../app.config.json', 'utf8')).o
  */
 async function AssignmentsCacheRequest(cName, username) {
     // classPath: string
-    const classPath = '../database/classes.json';
+    const classPath = './database/classes.json';
     // cId: number
     let cId = 0;
     let cachedAssignments = [];
@@ -29,7 +29,7 @@ async function AssignmentsCacheRequest(cName, username) {
         process.stdout.write(`\\\x1b[31m \rAn error occured while reading from the file at ${classPath}. Error occurs at assignments.mjs line 51.\n`);
     }
     // assPath: string
-    const assPath = `../database/assignments${cId}.json`;
+    const assPath = `./database/assignments${cId}.json`;
     try {
         // data: string
         const data = fs.readFileSync(assPath, 'utf8');
@@ -82,10 +82,11 @@ function ParseAssignmentNames(data) {
  */
 function WriteAssignmentsToFile(assignments, cId) {
     // path: string
-    const path = `../database/assignments${cId}.json`;
+    const path = `./database/assignments${cId}.json`;
     try {
         fs.writeFileSync(path, JSON.stringify(assignments));
         process.stdout.write(`\\\x1b[32m \rFile at ${path} written successfully.\n`);
+        return path;
     } catch (e) {
         process.stdout.write(`\\\x1b[31m \rAn error occurred while writing to the file at ${path}. Error occurs at assignments.mjs line 16.\n`);
     }

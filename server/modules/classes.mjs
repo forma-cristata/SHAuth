@@ -3,7 +3,7 @@ import fs from "fs";
 export {WriteClassesToFile, ParseClasses, ClassesGHRequest, ClassesCacheRequest, octokit};
 
 // ghToken: string
-const ghToken = JSON.parse(fs.readFileSync('../app.config.json', 'utf8')).gitHubAccessToken;
+const ghToken = JSON.parse(fs.readFileSync('./database/app.config.json', 'utf8')).gitHubAccessToken;
 const octokit = new Octokit({
     auth: ghToken
 });
@@ -14,7 +14,7 @@ const octokit = new Octokit({
  */
 async function ClassesCacheRequest() {
     // path: string
-    const path = `../database/classes.json`;
+    const path = `./database/classes.json`;
     // cachedClasses: string[]
     let cachedClasses = [];
     try {
@@ -83,7 +83,7 @@ function ParseClasses(data) {
  */
 function WriteClassesToFile(classes) {
     // path: string
-    const path = `../database/classes.json`;
+    const path = `./database/classes.json`;
     try {
         fs.writeFileSync(path, JSON.stringify(classes));
         process.stdout.write(`\\\x1b[32m \rFile at ${path} written successfully.\n`);

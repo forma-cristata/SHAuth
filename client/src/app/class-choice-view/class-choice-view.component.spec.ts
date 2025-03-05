@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClassChoiceViewComponent } from './class-choice-view.component';
+import {provideRouter} from '@angular/router';
 
 describe('ClassChoiceViewComponent', () => {
   let component: ClassChoiceViewComponent;
@@ -8,7 +9,8 @@ describe('ClassChoiceViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClassChoiceViewComponent]
+      imports: [ClassChoiceViewComponent],
+      providers: [provideRouter([])],
     })
     .compileComponents();
 

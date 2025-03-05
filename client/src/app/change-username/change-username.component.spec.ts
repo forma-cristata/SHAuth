@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Router} from '@angular/router';
 import { ChangeUsernameComponent } from './change-username.component';
+import {FormsModule} from '@angular/forms';
 
 describe('ChangeUsernameComponent', () => {
   let component: ChangeUsernameComponent;
@@ -8,9 +9,9 @@ describe('ChangeUsernameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChangeUsernameComponent]
+      imports: [FormsModule, ChangeUsernameComponent],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ChangeUsernameComponent);
     component = fixture.componentInstance;

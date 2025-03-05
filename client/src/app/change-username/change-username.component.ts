@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {Router} from '@angular/router';
-import {getCookie} from '../get-cookie';
+import {getCookie} from '../get-cookie.component';
 
 @Component({
   selector: 'app-change-username',
@@ -29,10 +29,11 @@ export class ChangeUsernameComponent implements OnInit {
    * Creates a cookie with the username and navigates to the classes page.
    * This allows user to remain "logged in"
    */
-  createUsernameCookie() {
-    let username = this.username;
+  createUsernameCookie(user: string = "") {
+    let username = user? user : this.username;
     document.cookie = `username=${username}; expires=${(this.termLengthInSeconds)}`;
     this.username = '';
-    this.router.navigate(['/classes']);
+    this.router.navigate(['/classes']).then(() => {
+      console.log('Navigated to classes page')});
   }
 }
