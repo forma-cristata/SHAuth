@@ -10,6 +10,7 @@ const app = express();
 const PORT = 3012;
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(compression());
 
 /**

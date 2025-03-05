@@ -11,6 +11,7 @@ const app = express();
 const PORT = 3009;
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(compression());
 
 // pollTime: string, hour: string, minute: string
