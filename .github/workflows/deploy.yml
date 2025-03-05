@@ -18,8 +18,11 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install dependencies
-      run: (cd ./client && npm install) && (cd .. && cd ./server && npm install)
+    - name: Install dependencies for client side
+      run: (cd ./client && npm install)
+
+    - name: Install dependencies for server side
+      run: (cd ./server && npm install)
 
 
     - name: Deploy server1
