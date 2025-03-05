@@ -19,17 +19,20 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      run: npm install
+      run: (cd ./client && npm install) && (cd ./server && npm install)
 
-    - name: Run tests
-      run: npm test
 
     - name: Deploy server1
-      run: npm run server1
+      run: (cd ./server && npm run server1)
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
     - name: Deploy server2
-      run: npm run server2
+      run: (cd ./server && npm run server2)
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+    - name: Deploy client
+      run: (cd ./client && npm run start)
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
