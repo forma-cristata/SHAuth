@@ -1,5 +1,5 @@
 {
-  "gitHubAccessToken" : "Your Token Here",
+  "gitHubAccessToken" : "${{ secrets.TOKEN }}",
   "pollTime" : "00:01",
-  "organization": "secets.ORGANIZATION"
+  "organization": "${{ secets.ORGANIZATION }}"
 }
