@@ -1,0 +1,35 @@
+name: Deploy Servers
+
+on:
+  push:
+    branches:
+      - deployment
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Deploy server1
+      run: npm run server1
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+    - name: Deploy server2
+      run: npm run server2
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}

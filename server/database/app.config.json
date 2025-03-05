@@ -1,5 +1,5 @@
 {
-  "gitHubAccessToken" : "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",
+  "gitHubAccessToken" : "${{ secrets.TOKEN }}",
   "pollTime" : "00:01",
-  "organization": "SouthHillsSubmissionCheck"
+  "organization": "${{ secrets.ORGANIZATION }}"
 }
