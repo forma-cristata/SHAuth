@@ -50,25 +50,24 @@
 .class-blocker, .class-blocker-opaque {
   width: calc((100vw - 120px) / 4);
   height: calc((100vh - 540px - 40px) / 2);
+  min-height: 125px;
+  min-width: fit-content;
   border: 5px solid var(--indigogo);
   border-radius: 20px !important;
   margin: auto auto;
   font-variant: small-caps;
   font-size: min(3vw, 3rem);
-  text-wrap: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  text-wrap: wrap;
   font-family: 'vonique', var(--bs-font-monospace), serif;
   padding: 20px;
   align-content: center;
-  min-height: 125px;
   cursor: pointer;
 }
 
 .class-blocker-opaque {
   opacity: 0;
+  cursor: default;
 }
-
 
 .c1, .c12 {
   border-color: var(--muted-green);
