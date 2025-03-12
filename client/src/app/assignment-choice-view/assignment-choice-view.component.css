@@ -60,6 +60,7 @@
 
 .ass-blocker-opaque {
   opacity: 0;
+  cursor: default;
 }
 
 .a1, .a12 {

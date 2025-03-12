@@ -2,72 +2,65 @@
   --dark-dots: var(--aptly-named-periwinkle);
   --circle-small: 12px;
   --circle-big: 88px;
-  --square-small: 25px;
-  --square-big: 75px;
+  --square-small: 30px;
+  --square-big: 70px;
   --smallSmall: var(--square-small);
   --bigBig: var(--square-big);
 }
 
 .circle {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: var(--dark-dots);
+  width: 15px;
+  height: 15px;
   opacity: 0;
+  transform: rotate(45deg);
+  animation: load-spin var(--duration) ease-in-out infinite, color-changer calc(var(--duration) * 5) infinite;
+
 }
 
 #circ-1 {
   top: 50px;
-  animation: load-spin var(--duration) infinite;
 }
 
 #circ-2 {
   top: var(--smallSmall);
   left: var(--smallSmall);
-  animation: load-spin var(--duration) infinite;
   animation-delay: calc(var(--duration) / 8);
 }
 
 #circ-3 {
   top: 0;
   left: 50px;
-  animation: load-spin var(--duration) infinite;
   animation-delay: calc(var(--duration) * 2 / 8);
 }
 
 #circ-4 {
   top: var(--smallSmall);
   left: var(--bigBig);
-  animation: load-spin var(--duration) infinite;
   animation-delay: calc(var(--duration) * 3 / 8);
 }
 
 #circ-5 {
   top: 50px;
   left: 100px;
-  animation: load-spin var(--duration) infinite;
   animation-delay: calc(var(--duration) * 4 / 8);
 }
 
 #circ-6 {
   top: var(--bigBig);
   left: var(--bigBig);
-  animation: load-spin var(--duration) infinite;
   animation-delay: calc(var(--duration) * 5 / 8);
 }
 
 #circ-7 {
   top: 100px;
   left: 50px;
-  animation: load-spin var(--duration) infinite;
   animation-delay: calc(var(--duration) * 6 / 8);
 }
 
 #circ-8 {
   top: var(--bigBig);
   left: var(--smallSmall);
-  animation: load-spin var(--duration) infinite;
   animation-delay: calc(var(--duration) * 7 / 8);
 }
 
@@ -104,6 +97,23 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes color-changer {
+  0%{
+    background-color: var(--light-green);
+  }
+  25%{
+    background-color: var(--another-teal);
+  }
+  50%{
+    background-color: var(--icon-purple);
+  }
+  75%{
+    background-color: var(--another-teal);
+  }
+  100%{
+    background-color: var(--light-green);
   }
 }
 

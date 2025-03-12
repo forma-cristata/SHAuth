@@ -66,8 +66,8 @@
 
 .class-blocker-opaque {
   opacity: 0;
+  cursor: default;
 }
-
 
 .c1, .c12 {
   border-color: var(--muted-green);
