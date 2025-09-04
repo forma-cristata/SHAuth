@@ -3,8 +3,6 @@
 
 https://github.com/user-attachments/assets/4324d6b1-b844-4e94-8ad1-895c70a9487c
 
-# Project Name
-
 ## Description
 This full-stack application gives students an extra layer of protection when submitting code assignments via SHA for an organization.
 
