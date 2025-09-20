@@ -3,12 +3,12 @@ import {octokit} from "./classes.mjs";
 export {shaGHRequest, generateFeedback};
 
 /**
- * Encodes the assignment title by replacing spaces with hyphens and converting to lowercase.
+ * Encodes the assignment title by replacing spaces with hyphens, removing plus signs, and converting to lowercase.
  * @param {string} sTitle - The title of the assignment.
  * @returns {string} - The encoded title.
  */
 function titleEncoding(sTitle) {
-    return sTitle.replace(/ /g, "-").toLowerCase();
+    return sTitle.replace(/ /g, "-").replace(/\+/g, "").toLowerCase();
 }
 
 /**
